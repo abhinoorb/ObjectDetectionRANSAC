@@ -78,5 +78,6 @@ y = np.random.randint(0,10, size = 30)
 bestFit, bestx, besty = RANSAC_linear(3,x,y,100,0.5,5)
 plt.plot(bestx, besty)
 plt.scatter(x,y)
+print('hello')
 
 # %%

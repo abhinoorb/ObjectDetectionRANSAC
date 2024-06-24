@@ -23,7 +23,6 @@ def RANSAC_linear(n_inliers, x, y, iters, thres, n_fit):
     # This function assumes x and y are ordered arrays of the same size s.t. the nth point is given by (x[n], y[n])
     # Initialize empty best fit model
     bestFit = (0,0)
-    bestError = None
     bestinliers = 0
     i = 0
    
@@ -75,7 +74,7 @@ y = np.random.randint(0,10, size = 30)
 
 # %%
 
-bestFit, bestx, besty = RANSAC_linear(3,x,y,100,0.5,5)
+bestFit, bestx, besty = RANSAC_linear(3,x,y,1,0.5,5)
 plt.plot(bestx, besty)
 plt.scatter(x,y)
 print('hello')
